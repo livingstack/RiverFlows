@@ -1,2 +1,2 @@
 #web: gunicorn RiverFlows:app
-web: gunicorn app.app.wsgi:application --log-file -
+web: gunicorn myproject.myproject.wsgi:application --log-file -
