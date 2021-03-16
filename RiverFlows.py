@@ -13,6 +13,9 @@ url = "https://waterservices.usgs.gov/nwis/iv/?sites=10163000,10155200&format=js
 apppath = /streamflows
 contentpath = /streamflows/static/
 images = /streamflows/static/images
+wsgipath = /usgs
+
+os.mkdri(wsgipath, 0755)
 os.mkdir(apppath, 0755)
 os.mkdir(contentpath, 0755)
 os.mkdir(images, 0755)
