@@ -276,7 +276,7 @@ print (msg)
 app = Flask(__name__)
 
 #@app.route('/')
-@app.route('/', methods=['GET'])
+@app.route('/application', methods=['GET'])
 
 def application():
     status = '200 OK'
@@ -296,4 +296,3 @@ def application():
 
 #if__name__== "__RiverFlows__":
 #	app.run(host="0.0.0.0, port=80, debug = True)
-application()
