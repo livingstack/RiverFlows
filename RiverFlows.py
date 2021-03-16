@@ -10,10 +10,10 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from flask import Flask
 url = "https://waterservices.usgs.gov/nwis/iv/?sites=10163000,10155200&format=json,1.1&period=P7D"
-apppath = /streamflows
-contentpath = /streamflows/static/
-images = /streamflows/static/images
-wsgipath = /usgs
+apppath = '/streamflows'
+contentpath = '/streamflows/static/'
+images = '/streamflows/static/images'
+wsgipath = '/usgs'
 
 os.mkdri(wsgipath, 0755)
 os.mkdir(apppath, 0755)
