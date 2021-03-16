@@ -277,7 +277,7 @@ app = Flask(__name__)
 
 @app.route('/')
 
-def application(self):
+def application():
     status = '200 OK'
         #response_header = [('Content-type','text/html')]
     html = '<html>\n' \
@@ -295,3 +295,4 @@ def application(self):
 
 #if__name__== "__RiverFlows__":
 #	app.run(host="0.0.0.0, port=80, debug = True)
+application()
