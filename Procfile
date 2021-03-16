@@ -1,2 +1,2 @@
-web: gunicorn /streamflows/app.wsgi
+web: gunicorn app.wsgi
 #gunicorn -w 4 RiverFlows:app
