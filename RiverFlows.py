@@ -8,7 +8,7 @@ import smtplib
 from pathlib import Path
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-from flask import Flask
+from flask import Flask, render_template
 url = "https://waterservices.usgs.gov/nwis/iv/?sites=10163000,10155200&format=json,1.1&period=P7D"
 apppath = '/streamflows'
 contentpath = '/streamflows/static/'
@@ -276,7 +276,8 @@ print (msg)
 app = Flask(__name__)
 
 #@app.route('/')
-@app.route('/application', methods=['GET'])
+@app.route('/application')
+
 
 def application():
     status = '200 OK'
@@ -291,8 +292,9 @@ def application():
         '</html>\n'
     html = bytes(html,encoding = 'utf-8')
     response_header = [('Content-type','text/html')]
+    response = Response(html, Content_type= 'text/html')
     #start_response(status,response_header)
-    return [html]
+    return response
 
 #if__name__== "__RiverFlows__":
 #	app.run(host="0.0.0.0, port=80, debug = True)
