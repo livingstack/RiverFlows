@@ -168,7 +168,7 @@ chart3.title = "Lower and Middle Provo flows from past week"
 chart3.x_labels = formattedldate
 chart3.add('Lower Flows',lflow)
 chart3.add('Middle Flows',mflow)
-chart3.render_to_file('/Lower_and_Middle_Provo.svg')
+chart3.render_to_file('/app/Lower_and_Middle_Provo.svg')
 #chart3.render_to_file('/users/braden/Documents/Scripts/USGS/Lower_and_Middle_Provo.svg')
 lcurrentdate = formattedldate[-1]
 lyesterday = formattedldate[-2]
@@ -290,7 +290,7 @@ def app(environ,start_response):
         '<div style="width: 100%; font-size: 40px; font-weight: bold; text-align: center;">\n' \
         'Provo River CFS Flows:\n' \
         '</div>\n' \
-        '<img src="/Lower_and_Middle_Provo.svg" alt="Lower and Middle provo flows for past 7 days"/>\n' \
+        '<img src="/app/Lower_and_Middle_Provo.svg" alt="Lower and Middle provo flows for past 7 days"/>\n' \
 	'</body>\n' \
         '</html>\n'
     html = bytes(html,encoding = 'utf-8')
