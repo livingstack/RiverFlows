@@ -1,6 +1,7 @@
 import requests
 import json
 import pygal
+import os, sys
 import datetime
 from datetime import datetime
 import smtplib
@@ -9,6 +10,12 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from flask import Flask
 url = "https://waterservices.usgs.gov/nwis/iv/?sites=10163000,10155200&format=json,1.1&period=P7D"
+apppath = /streamflows
+contentpath = /streamflows/static/
+
+os.mkdir(apppath, 0755)
+os.mkdir(contentpath, 0755)
+
 
 response = requests.get(url)
 
@@ -157,8 +164,8 @@ chart3.title = "Lower and Middle Provo flows from past week"
 chart3.x_labels = formattedldate
 chart3.add('Lower Flows',lflow)
 chart3.add('Middle Flows',mflow)
-#chart3.render_to_file('/opt/streamflows/static/images/Lower_and_Middle_Provo.svg')
-chart3.render_to_file('/users/braden/Documents/Scripts/USGS/Lower_and_Middle_Provo.svg')
+chart3.render_to_file('/streamflows/static/images/Lower_and_Middle_Provo.svg')
+#chart3.render_to_file('/users/braden/Documents/Scripts/USGS/Lower_and_Middle_Provo.svg')
 lcurrentdate = formattedldate[-1]
 lyesterday = formattedldate[-2]
 
