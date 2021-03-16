@@ -1,7 +1,9 @@
 python_home = '/'
 import sys
+import os
 import site
 sys.path.insert(0, /)
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'myproject.myproject.settings')
 #from RiverFlows import app as application
 python_version = '.'.join(map(str, sys.version.info[:2'))
 site_packages = python_home + '/lib/python%s/site-packages' % python_version
