@@ -278,6 +278,10 @@ app = Flask(__name__)
 #@app.route('/')
 @app.route('/application')
 
+html_response = application()
+
+def home():
+   return render_template(html_response)
 
 def application():
     status = '200 OK'
@@ -292,7 +296,7 @@ def application():
         '</html>\n'
     html = bytes(html,encoding = 'utf-8')
     response_header = [('Content-type','text/html')]
-    response = Response(html, Content_type= 'text/html')
+    response = Response([html], Content_type= 'text/html')
     #start_response(status,response_header)
     return response
 
