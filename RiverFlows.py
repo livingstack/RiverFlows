@@ -285,7 +285,7 @@ def application(environ,start_response):
         '<div style="width: 100%; font-size: 40px; font-weight: bold; text-align: center;">\n' \
         'Provo River CFS Flows:\n' \
         '</div>\n' \
-        '<img src="/static/images/Lower_and_Middle_Provo.svg" alt="Lower and Middle provo flows for past 7 days"/>\n' \
+        '<img src="Lower_and_Middle_Provo.svg" alt="Lower and Middle provo flows for past 7 days"/>\n' \
 	'</body>\n' \
         '</html>\n'
     html = bytes(html,encoding = 'utf-8')
