@@ -16,9 +16,9 @@ images = '/streamflows/static/images'
 wsgipath = '/usgs'
 
 os.mkdir(wsgipath)
-os.mkdir(apppath, 0755)
-os.mkdir(contentpath, 0755)
-os.mkdir(images, 0755)
+os.mkdir(apppath)
+os.mkdir(contentpath)
+os.mkdir(images)
 
 
 response = requests.get(url)
