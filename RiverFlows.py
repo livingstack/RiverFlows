@@ -275,7 +275,8 @@ print (msg)
 #import pdb; pdb.set_trace()
 app = Flask(__name__)
 
-@app.route('/')
+#@app.route('/')
+@app.route('/', methods=['GET'])
 
 def application():
     status = '200 OK'
