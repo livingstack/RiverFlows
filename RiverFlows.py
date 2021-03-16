@@ -295,7 +295,7 @@ def application():
         '</html>\n'
     html = bytes(html,encoding = 'utf-8')
     response_header = [('Content-type','text/html')]
-    response = Response([html], Content_type= 'text/html')
+    response = application([html], Content_type= 'text/html')
     #start_response(status,response_header)
     return response
 
