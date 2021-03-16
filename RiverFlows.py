@@ -276,13 +276,13 @@ print (msg)
 app = Flask(__name__)
 
 #@app.route('/')
-@app.route('/application')
+@app.route('/app')
 
 
 
 
 
-def application(html,response_header):
+def app(environ,start_response):
     status = '200 OK'
         #response_header = [('Content-type','text/html')]
     html = '<html>\n' \
@@ -290,18 +290,13 @@ def application(html,response_header):
         '<div style="width: 100%; font-size: 40px; font-weight: bold; text-align: center;">\n' \
         'Provo River CFS Flows:\n' \
         '</div>\n' \
-        '<img src="Lower_and_Middle_Provo.svg" alt="Lower and Middle provo flows for past 7 days"/>\n' \
+        '<img src="/static/images/Lower_and_Middle_Provo.svg" alt="Lower and Middle provo flows for past 7 days"/>\n' \
 	'</body>\n' \
         '</html>\n'
     html = bytes(html,encoding = 'utf-8')
     response_header = [('Content-type','text/html')]
-    response = application([html], response_header)
-    #start_response(status,response_header)
-    return response
+    start_response(status,response_header)
+    return [html]
 
-html_response = application()
-
-def home():
-   return render_template(html_response)
 #if__name__== "__RiverFlows__":
 #	app.run(host="0.0.0.0, port=80, debug = True)
