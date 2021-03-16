@@ -290,7 +290,7 @@ def application():
         '</html>\n'
     html = bytes(html,encoding = 'utf-8')
     response_header = [('Content-type','text/html')]
-    start_response(status,response_header)
+    #start_response(status,response_header)
     return [html]
 
 #if__name__== "__RiverFlows__":
