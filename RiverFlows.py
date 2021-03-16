@@ -282,7 +282,7 @@ app = Flask(__name__)
 
 
 
-def application():
+def application([somelist1],[somelist2]):
     status = '200 OK'
         #response_header = [('Content-type','text/html')]
     html = '<html>\n' \
