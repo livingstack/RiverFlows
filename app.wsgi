@@ -1,9 +1,9 @@
-python_home = '/streamflows/.venv/'
+python_home = '/'
 import sys
 import site
-sys.path.insert(0, /streamflows/')
+sys.path.insert(0, /)
 #from RiverFlows import app as application
-python_vertsion = '.'.join(map(str, sys.version.info[:2'))
+python_version = '.'.join(map(str, sys.version.info[:2'))
 site_packages = python_home + '/lib/python%s/site-packages' % python_version
 
 site.addsitedir(site_packages)
