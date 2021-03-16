@@ -12,9 +12,10 @@ from flask import Flask
 url = "https://waterservices.usgs.gov/nwis/iv/?sites=10163000,10155200&format=json,1.1&period=P7D"
 apppath = /streamflows
 contentpath = /streamflows/static/
-
+images = /streamflows/static/images
 os.mkdir(apppath, 0755)
 os.mkdir(contentpath, 0755)
+os.mkdir(images, 0755)
 
 
 response = requests.get(url)
@@ -289,5 +290,5 @@ def application(environ,start_response):
     start_response(status,response_header)
     return [html]
 
-if__name__== "__RiverFlows__":
-	app.run(host="127.0.0.1, port=80, debug = True)
+#if__name__== "__RiverFlows__":
+#	app.run(host="0.0.0.0, port=80, debug = True)
