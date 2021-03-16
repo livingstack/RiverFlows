@@ -281,3 +281,6 @@ def application(environ,start_response):
     response_header = [('Content-type','text/html')]
     start_response(status,response_header)
     return [html]
+
+if__name__== "__RiverFlows__":
+	app.run(host="127.0.0.1, port=80, debug = True)
