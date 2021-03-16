@@ -278,10 +278,9 @@ app = Flask(__name__)
 #@app.route('/')
 @app.route('/application')
 
-html_response = application()
 
-def home():
-   return render_template(html_response)
+
+
 
 def application():
     status = '200 OK'
@@ -300,5 +299,9 @@ def application():
     #start_response(status,response_header)
     return response
 
+html_response = application()
+
+def home():
+   return render_template(html_response)
 #if__name__== "__RiverFlows__":
 #	app.run(host="0.0.0.0, port=80, debug = True)
