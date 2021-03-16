@@ -277,7 +277,7 @@ app = Flask(__name__)
 
 @app.route('/')
 
-def application(environ,start_response):
+def application(self):
     status = '200 OK'
         #response_header = [('Content-type','text/html')]
     html = '<html>\n' \
