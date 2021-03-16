@@ -15,10 +15,10 @@ contentpath = '/streamflows/static/'
 images = '/streamflows/static/images'
 wsgipath = '/usgs'
 
-os.mkdir(wsgipath)
-os.mkdir(apppath)
-os.mkdir(contentpath)
-os.mkdir(images)
+#os.mkdir(wsgipath)
+#os.mkdir(apppath)
+#os.mkdir(contentpath)
+#os.mkdir(images)
 
 
 response = requests.get(url)
@@ -168,7 +168,7 @@ chart3.title = "Lower and Middle Provo flows from past week"
 chart3.x_labels = formattedldate
 chart3.add('Lower Flows',lflow)
 chart3.add('Middle Flows',mflow)
-chart3.render_to_file('/streamflows/static/images/Lower_and_Middle_Provo.svg')
+chart3.render_to_file('Lower_and_Middle_Provo.svg')
 #chart3.render_to_file('/users/braden/Documents/Scripts/USGS/Lower_and_Middle_Provo.svg')
 lcurrentdate = formattedldate[-1]
 lyesterday = formattedldate[-2]
@@ -275,7 +275,7 @@ print (msg)
 #import pdb; pdb.set_trace()
 app = Flask(__name__)
 
-@app.route('/usgs')
+@app.route('/')
 
 def application(environ,start_response):
     status = '200 OK'
