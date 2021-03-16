@@ -1,2 +1,2 @@
-#web: gunicorn gettingstarted.wsgi --log-file -
-gunicorn -w 4 RiverFlows:app
+web: gunicorn app.wsgi
+#gunicorn -w 4 RiverFlows:app
